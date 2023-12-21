@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items:  center;
+  padding: 5px 15px;
+}
+.nav-sidebar{
+  display: flex;
+  justify-content: space-between;
+  align-items:  center;
+  gap: 12px;
+  font-size: 18px;
+}
+.nav-rightContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items:  center;
+  gap: 12px;
+}
+.noteLogo{
+  width: 30px;
+}
+nav button{
+  border: none;
+  background-color: transparent;
+}
+nav input{
+   width: 40vw;
+   height: 24px;
+   padding: 5px;
+   padding-left: 33px;
+   font-size: 16px;
+   border-radius: 5px;
+   border: 2px solid black;
+}
+.searchBtn{
+     position: relative;
+     left: 35px;
+     top: 7px;
+}
+.sidebarContent{
+  flex: 0 0 auto;
+  width:  max-content;
+}
+
+.sidebarContent button{
+   background-color: transparent;
+   border: none;
+   padding: 12px;
+   padding-left: 20px;
+   font-size: 18px;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   column-gap: 40px;
+   row-gap: 5px;
+   width: 100%;
+   text-align: left;
+}
+.sidebarContent button:hover{
+    border-radius: 5px;
+    background-color: lightgray;
+}
+.mainContainer{
+  width: max-content;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 40px;
+}
+.hideName{
+   display: none;
+}
+.showName{
+  display: block;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 20px;
+  box-shadow: 1px 1px 5px rgb(231, 224, 224), -1px -1px 5px rgb(231, 224, 224) ;
+  padding: 20px;
+  border-radius: 5px;
+  width: 40vw;
+  height: max-content;
+}
+.form input, .form textarea{
+   border: none;
+   outline: none;
+   height: auto;
+   resize: none;
+   overflow: hidden;
+}
+
+.contentContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width:calc(100vw - 220px);
+  flex: 1;
+}
+
+.addNote{
+    margin: auto;
+    height: 100%;
+}
+.newNoteContainerButtons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.newNoteContainerButtons button{
+   background-color: transparent;
+   border: none;
+}
+.noteItemDiv{
+    padding: 10px 15px;
+    box-shadow: 1px 1px 2px rgb(201, 201, 196), -1px -1px 2px rgb(201, 201, 196);
+    max-width: 400px;
+    height:auto;
+}
+
+.noteItemsContainer{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: start;
+  column-gap: 20px;
+}
+.noteItemModificationButton{
+   display: flex;
+   justify-content: flex-end;
+   gap: 12px;
+}
+.noteItemModificationButton button{
+   background-color: transparent;
+   border: none;
+}
