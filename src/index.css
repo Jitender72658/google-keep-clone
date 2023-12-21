@@ -148,7 +148,7 @@ nav input{
     border-radius: 5px;
     margin: 5px;
 }
-.noteItemDiv hover{
+.noteItemDiv:hover{
   transform: scale(1.1);
   box-shadow: 2px 2px 3px rgb(201, 201, 196), -2px -2px 3px rgb(201, 201, 196);
 }
@@ -173,12 +173,16 @@ nav input{
    background-color: transparent;
    border: none;
 }
-.confirmation-dialog{
-  padding: 8px 10px;
+.confirmation-dialog {
+  padding: 20px 25px;
   border: 1px solid lightblue;
   border-radius: 5px;
   box-shadow: 1px 1px 2px lightgreen, -1px -1px 2px lightgreen;
+  position: absolute;
+  background-color: rgba(142, 133, 133, 0.8); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
 }
+
 .confirm-delete-button{
    border-radius: 5px;
    border: none;

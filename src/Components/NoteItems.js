@@ -55,7 +55,7 @@ const NoteItems = () => {
         </div>
       )}
 
-      {!showConfirmation &&
+      {
         filteredNotes.length > 0 &&
         filteredNotes.slice().reverse().map((note) => (
           <div className='noteItemDiv' key={note.id} style={{ backgroundColor: note.background }}>
