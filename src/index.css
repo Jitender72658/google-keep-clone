@@ -181,6 +181,7 @@ nav input{
   position: absolute;
   background-color: rgba(142, 133, 133, 0.8); /* Semi-transparent background */
   backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+  z-index: 100;
 }
 
 .confirm-delete-button{
@@ -198,4 +199,52 @@ nav input{
    color: white;
    padding: 7px 12px;
    margin-left: 10px;
+}
+
+@media (max-width: 720px){
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
+  nav{
+    padding: 2px;
+  }
+  .nav-sidebar{
+    gap: 3px;
+    font-size: 16px;
+  }
+  nav input{
+    width: auto;
+    height: 25px;
+    padding: 5px;
+    font-size: 14px;
+ }
+ .searchBtn{
+ display: none;
+}
+  .nav-rightContainer{
+    gap: 0px !important;
+  }
+  .sidebarContent button{
+    padding: 8px;
+    padding-left: 16px;
+    font-size: 14px;
+    column-gap: 15px;
+    row-gap: 5px;
+    width: 100%;
+    text-align: left;
+    padding-right: 25px;
+ }
+ .addNote{
+  height: 100%;
+  width: 100%;
+}
+.newNoteContainerButtons{
+  flex-wrap: wrap;
+}
+ .contentContainer{
+  width:calc(100vw - 180px);
+  flex: 1;
+  gap: 40px;
+}
 }
