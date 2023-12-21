@@ -12,7 +12,7 @@ const Sidebar = () => {
    
   return (
     <div className='sidebarContent'>
-        <button><LightbulbOutlinedIcon/> <span className={className}>Notes</span></button>
+        <button className='active-sidebar-item'><LightbulbOutlinedIcon/> <span className={className}>Notes</span></button>
         <button><NotificationsNoneOutlinedIcon/> <span className={className}>Remainders</span></button>
         <button> <ModeEditOutlineOutlinedIcon/><span className={className}>Edit lables</span></button>
         <button><ArchiveOutlinedIcon/> <span className={className}>Archives</span></button>

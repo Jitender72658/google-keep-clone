@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poppins', sans-serif; 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+textarea{
+  font-family: 'Courier New', Courier, monospace;
 }
 
 nav{
@@ -12,6 +14,8 @@ nav{
   justify-content: space-between;
   align-items:  center;
   padding: 5px 15px;
+  border-top: 1px solid #ECCDEF;
+  border-bottom:1px solid #ECCDEF;
 }
 .nav-sidebar{
   display: flex;
@@ -35,9 +39,9 @@ nav button{
 }
 nav input{
    width: 40vw;
-   height: 28px;
+   height: 40px;
    padding: 5px;
-   padding-left: 33px;
+   padding-left: 40px;
    font-size: 16px;
    border-radius: 5px;
    border: none;
@@ -46,20 +50,24 @@ nav input{
 }
 .searchBtn{
      position: relative;
-     left: 35px;
+     left: 40px;
      top: 7px;
 }
 .sidebarContent{
   flex: 0 0 auto;
-  width:  max-content;
+  width: calc(max-content+50px)
 }
-
+.active-sidebar-item{
+  border-top-right-radius:30px;
+  border-bottom-right-radius:30px;
+    background-color:#FEEFC3 !important;
+}
 .sidebarContent button{
    background-color: transparent;
    border: none;
    padding: 12px;
    padding-left: 20px;
-   font-size: 18px;
+   font-size: 16px;
    display: flex;
    justify-content: flex-start;
    align-items: center;
@@ -67,10 +75,12 @@ nav input{
    row-gap: 5px;
    width: 100%;
    text-align: left;
+   padding-right: 40px;
 }
 .sidebarContent button:hover{
-    border-radius: 5px;
-    background-color: lightgray;
+  border-top-right-radius:30px;
+  border-bottom-right-radius:30px;
+    background-color:#F1F3F4;
 }
 .mainContainer{
   width: max-content;
