@@ -1,7 +1,6 @@
 import React,{useContext}from 'react'
 import AddNote from './AddNote'
 import NoteItems from './NoteItems'
-import DeleteConfirmation from './DeleteConfirmation'
 
 const Content = () => {
     
@@ -10,8 +9,8 @@ const Content = () => {
         <div>
               <AddNote/>
         </div>
-        <div>
-            { <DeleteConfirmation/> && <NoteItems/> }
+        <div className='noteItemOuterContainer'>
+            <NoteItems/>
         </div>       
     </div>
   )
