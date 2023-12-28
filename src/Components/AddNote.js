@@ -1,4 +1,4 @@
-import { useState,useContext,useEffect} from "react";
+import { useState,useContext,useEffect,useRef} from "react";
 import NoteItemContext from "../Context/NoteItemsContext"
 import AddAlertOutlinedIcon from '@mui/icons-material/AddAlertOutlined';
 import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
@@ -12,6 +12,7 @@ import DataContext from "../Context/DataContext";
 import ColorPicker from './ColorPicker';
 
 const AddNote = () => {
+   const inputRef = useRef(null);
   const { title, setTitle, noteContent, setNoteContent,bgColor,setColorPickerAnchor, id,setId} = useContext(DataContext);
   const { noteItems, setNoteItems,setFilteredNotes } = useContext(NoteItemContext);
   
@@ -26,6 +27,10 @@ const AddNote = () => {
 
   useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(noteItems));
+    if (inputRef.current) {
+      inputRef.current.style.height = 'auto';
+      inputRef.current.style.height = inputRef.current.scrollHeight + 'px';
+    }
   }, [noteItems]);
 
   function handleTitleUpdate(event) {
@@ -33,6 +38,9 @@ const AddNote = () => {
   }
 
   function handleContentUpdate(event) {
+    if(event===null){
+      return;
+    }
     setNoteContent(event.target.value);
     event.target.style.height = 'auto';
     event.target.style.height = event.target.scrollHeight + 'px';
@@ -64,7 +72,7 @@ const AddNote = () => {
     <div className='addNote'>
         <form className='form' onSubmit={(event)=>handleSubmit(event)} >
              <input value={title} style={{fontWeight: "bold"}}onChange={handleTitleUpdate}placeholder='Title'/>
-             <textarea value={noteContent} onChange={handleContentUpdate} type='text'  placeholder='Take a note ...'/>
+             <textarea ref={inputRef} value={noteContent} onChange={handleContentUpdate} type='text'  placeholder='Take a note ...'/>
              <div className="newNoteContainerButtons">
                 <button><AddAlertOutlinedIcon/></button>
                 <button><PersonAddAltOutlinedIcon/></button>
